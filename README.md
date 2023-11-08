@@ -37,7 +37,8 @@ Just send an email to "afshar.mohebbi@gmail.com".
 
 ## Instructions
 ### create database
-```
-yarn global add sequelize-cli
-
+To create the database, uncomment these lines in the `app.js`. It is a simple solution instead of `sequelize migration`
+```js
+    // sequelize.sync({ force: true });
+    // console.log("All models were synchronized successfully.");
 ```
