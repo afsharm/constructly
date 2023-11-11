@@ -36,9 +36,39 @@ Just send an email to "afshar.mohebbi@gmail.com".
 برای گام های بعدی این ایده وجود دارد که بتوان با پارامترهای ورودی مشخص و با توجه به طرح تفصیلی هر شهر و هر روستا، بهنیه ترین پلان و مصالح را به دست آورد. این موضوع فقط بحث محاسبات و تخمین هزینه ها نیست، بلکه انجام محاسبات با پارامترهای مختلف و انتخاب بهترین حالت ممکن است. هر شهر و شهرداری یا روستا و منطقه ای قوانین خاص خود را برای ساخت ساز دارند. از جمله حداکثر تراکم، حداقل اندازه سقف، جانمایی پارکینگ و غیره و غیره. پیدا کم هزینه ترین یا بهینه ترین نقشه یا مصالح ممکن می تواند کمک زیادی به مالکان و سازندگان انجام بدهد.
 
 ## Instructions
-### create database
+
+### running the project
+
+```bash
+# install the dependencies
+yarn install
+
+# run the tests
+yarn test
+
+# start the project
+yarn start
+
+# start the project in the test mode
+yarn dev
+```
+
+### create the database
+
 To create the database, uncomment these lines in the `app.js`. It is a simple solution instead of `sequelize migration`
 ```js
     // sequelize.sync({ force: true });
     // console.log("All models were synchronized successfully.");
+```
+
+### To test the routes with `CURL`
+
+```bash
+# Use curl with bash script on Windows
+
+# Making a GET request:
+curl http://localhost:3000/buildingItems
+
+# Making a POST request with JSON data
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Item1"}' http://localhost:3000/buildingItems
 ```
