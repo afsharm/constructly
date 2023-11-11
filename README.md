@@ -67,8 +67,8 @@ To create the database, uncomment these lines in the `app.js`. It is a simple so
 # Use curl with bash script on Windows
 
 # Making a GET request:
-curl http://localhost:3000/buildingItems
+curl http://localhost:3000/buildingItem
 
 # Making a POST request with JSON data
-curl -X POST -H "Content-Type: application/json" -d '{"name":"Item1"}' http://localhost:3000/buildingItems
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Item1"}' http://localhost:3000/buildingItem
 ```

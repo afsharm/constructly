@@ -18,6 +18,6 @@ const app = express();
 app.use(express.json());
 app.use('/', healthRoutes);
 app.use('/greeting', greetingRoutes);
-app.use('/buildingItems', buildingItemRoutes);
+app.use('/buildingItem', buildingItemRoutes);
 
 module.exports = app;
