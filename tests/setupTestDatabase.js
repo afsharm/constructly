@@ -12,10 +12,10 @@ const setupSequelize = new Sequelize({
 async function setupTestDatabase() {
   try {
     // Create the database if it doesn't exist
-    await setupSequelize.query('CREATE DATABASE IF NOT EXISTS constructly_test;');
+    //await setupSequelize.query('CREATE DATABASE IF NOT EXISTS constructly_test;');
 
     // Use the test database
-    await setupSequelize.query('USE constructly_test;');
+    //await setupSequelize.query('USE constructly_test;');
 
     // Create the tables if they don't exist
     await sequelizeDatabase.sync({ force: true }); // This will drop all existing tables and create new ones
