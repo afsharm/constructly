@@ -1,6 +1,12 @@
 const request = require('supertest');
 const app = require('../app');
-require('./test-setup');
+
+const { setupTestDatabase } = require('./setupTestDatabase');
+
+beforeAll(async () => {
+    // Setup the test database before running any tests
+    await setupTestDatabase();
+});
 
 describe('Building Item API', () => {
     it('should create a new building item', async () => {
