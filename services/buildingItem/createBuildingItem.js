@@ -1,9 +1,11 @@
 const BuildingItem = require('../../models/buildingItem');
+const CreateBuildingItemDTO = require('../../commands/CreateBuildingItemDTO');
 
-module.exports = async (buildingItem) => {
+module.exports = async (buildingItemData) => {
     try {
-        const item = await BuildingItem.create(buildingItem);
-        return item;
+        const { name } = new CreateBuildingItemDTO(buildingItemData.name);
+        const buildingItem = await BuildingItem.create({ name });
+        return buildingItem;
     } catch (error) {
         console.log(error);
         throw new Error('Failed to create the building item');
