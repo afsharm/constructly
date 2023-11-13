@@ -1,7 +1,7 @@
 {
-    "username": "username_dev",
-    "password": "password_dev",
-    "database": "development_db",
-    "host": "localhost",
-    "dialect": "mysql"
-  }
+  "username": "root",
+  "password": "admin",
+  "database": "constructly_test",
+  "host": "127.0.0.1",
+  "dialect": "mysql"
+}
