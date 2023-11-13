@@ -34,7 +34,7 @@ jobs:
         run: yarn install
 
       - name: Run tests
-        run: yarn test # Replace with your actual test command
+        run: yarn test
 
       - name: Build and deploy (if applicable)
         run: |

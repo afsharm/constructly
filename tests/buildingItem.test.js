@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require('../app');
+require('./test-setup');
 
 describe('Building Item API', () => {
     it('should create a new building item', async () => {
